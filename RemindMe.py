@@ -49,7 +49,6 @@ async def remindme(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logging.exception("Error in /remindme")
         await update.message.reply_text("⚠️ Something went wrong. Try again.")
 
-# Главный запуск
 if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("remindme", remindme))
